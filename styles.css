@@ -1,114 +1,58 @@
 /* General body styling */
 body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #000; /* Black background for the content */
-  color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Navigation bar styling with flexbox */
+/* Navigation bar styling */
 .navbar {
-  background-color: #fff; /* White background for the navbar */
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0 20px; /* Add padding on the sides */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow to lift navbar */
+    background-color: #fff; /* QuickBooks uses a white navbar */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Navigation links styling */
 .navbar a {
-  display: block;
-  color: #000; /* Black text for the links */
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 17px;
-  border-right: 1px solid #f0f0f2; /* Adds a separator between links */
+    text-decoration: none;
+    color: #333; /* Dark text for visibility */
+    padding: 0.5rem 1rem;
 }
 
-/* Last child link in navbar does not have right border */
-.navbar a:last-child {
-  border-right: none;
-}
-
-/* Navigation links - on hover */
-.navbar a:hover {
-  background-color: #f0f0f2; /* Light grey background */
-  color: black;
-}
-
-/* New styles for the right-aligned group */
-.navbar-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-/* Style for the question mark icon link */
-.navbar-right .icon-link img {
-  height: 25px; /* Adjust size as necessary */
-  width: auto;
-  vertical-align: middle;
-}
-
-/* Style for the MAGNVS.io box */
-.navbar-right .magnvs-box {
-  background-color: gold;
-  padding: 10px 20px;
-  border-radius: 5px; /* Optional: for rounded corners */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: for a subtle shadow */
-  color: black; /* Text color */
-  font-weight: bold; /* Make the font bold */
-  text-decoration: none; /* Remove underline from link */
-  margin-left: 20px; /* Space between the icon and the box */
-}
-
-/* Main content and hero section styling */
-.main {
-  padding-top: 50px; /* Space for fixed navbar */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100% - 50px); /* Full height minus navbar */
-}
-
-.hero-section {
-  text-align: center;
-  max-width: 1200px; /* Max width for content */
-}
-
-/* Styling for large hero text */
-.hero-section h1 {
-  font-size: 3rem; /* Large font size */
-  margin-bottom: 1rem;
-}
-
-/* Paragraph styling */
-.hero-section p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-  }
-  .navbar a,
-  .navbar-right,
-  .navbar-right .icon-link,
-  .navbar-right .magnvs-box {
-    flex: 1 0 100%; /* Make each link and styled elements take full width */
+/* Main hero section styling */
+.hero {
     text-align: center;
-    border-right: none;
-    padding: 12px;
-    margin-left: 0; /* Aligns items to the center on smaller screens */
-  }
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light gray background as a placeholder */
 }
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #0077c5; /* QuickBooks blue color */
+}
+
+.hero p {
+    color: #666; /* Placeholder text color */
+}
+
+/* Call to action button styling */
+.cta, .secondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cta {
+    background-color: #22c55e; /* Green color for primary CTA */
+    color: #fff;
+}
+
+.secondary {
+    background-color: #ddd; /* Light color for secondary option */
+    color: #333;
+}
+
+/* Add responsive design, hover effects, and more as needed */
