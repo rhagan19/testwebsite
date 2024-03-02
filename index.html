@@ -1,92 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page</title>
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .navbar a:hover {
-    background: #ddd;
-    color: black;
-  }
-  .main {
-    padding: 16px;
-    margin-top: 50px;
-    height: 1500px; /* Used for demonstration */
-  }
-  .hero-section {
-    text-align: center;
-    padding: 50px;
-    background: #1c1c1c;
-    color: white;
-  }
-  .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-  .button:hover {
-    background-color: #45a049;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Replica</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add link to your CSS file -->
 </head>
 <body>
-
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="curriculums.html">Curriculums</a>
-  <a href="updates.html">Updates</a>
-  <div class="navbar-right">
-    <a href="javascript:void(0);" onclick="openEmail()" class="icon-link"><img src="question-icon.png" alt="Get Help" /></a>
-    <a href="http://magnvs.io" class="magnvs-box">MAGNVS.io</a>
-  </div>
-</div>
-
-<div class="main">
-  <div class="hero-section">
-    <h1>Joined-up curriculums. Effortless learning.</h1>
-    <p>From early education to advanced degrees – organize and track all educational journeys with MAGNVS.io.</p>
-    <a href="#" class="button">Start free</a>
-    <a href="#" class="button">Contact sales</a>
-  </div>
-  <!-- Content of your site -->
-</div>
-
-<script>
-/* Insert the JavaScript code here */
-function openEmail() {
-  var subject = encodeURIComponent("Help Request");
-  var emailBody = encodeURIComponent("Hello,\n\nI need assistance with...");
-  window.location.href = `mailto:info@magnvs.io?subject=${subject}&body=${emailBody}`;
-}
-</script>
-
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#products">Products & Features</a>
+        <a href="#plans">Plans & Pricing</a>
+        <a href="#support">Learn & Support</a>
+        <a href="#signin">Sign in</a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>ORGANIZED ALL YEAR, ALL RIGHT HERE</h1>
+        <p>Get paid, manage cash flow, and track what you need for tax time—all in one place.</p>
+        <button class="cta">See plans and features</button>
+        <button class="secondary">Take the quiz</button>
+    </section>
+    
+    <!-- Footer or additional content goes here -->
+    
+    <script src="script.js"></script>
+    <!-- Add link to your JS file if needed -->
 </body>
 </html>
