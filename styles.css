@@ -1,0 +1,88 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+th {
+  background-color: #1c1c1c;
+  color: #a9a9a9;
+}
+
+tbody tr {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
+
+td .positive {
+  color: #4caf50;
+}
+
+td .negative {
+  color: #f44336;
+}
+
+td span {
+  font-weight: bold;
+  color: #82e0aa;
+}
+
+.sparkline {
+  /* Placeholder for sparkline graph styling */
+}
+
+/* Style the buttons */
+button {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Responsive table adjustments */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    width: auto;
+    display: block;
+    text-align: right;
+  }
+
+  th, td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    color: #a9a9a9;
+  }
+}
