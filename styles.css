@@ -43,21 +43,30 @@ body, html {
   color: black;
 }
 
+/* New styles for the right-aligned group */
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
 /* Style for the question mark icon link */
-.navbar .icon-link img {
+.navbar-right .icon-link img {
   height: 25px; /* Adjust size as necessary */
   width: auto;
+  vertical-align: middle;
 }
 
 /* Style for the MAGNVS.io box */
-.navbar .magnvs-box {
+.navbar-right .magnvs-box {
   background-color: gold;
   padding: 10px 20px;
-  margin-left: auto; /* This pushes the .magnvs-box to the right */
   border-radius: 5px; /* Optional: for rounded corners */
   box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: for a subtle shadow */
   color: black; /* Text color */
   font-weight: bold; /* Make the font bold */
+  text-decoration: none; /* Remove underline from link */
+  margin-left: 20px; /* Space between the icon and the box */
 }
 
 /* Main content and hero section styling */
@@ -93,11 +102,13 @@ body, html {
     flex-wrap: wrap;
   }
   .navbar a,
-  .navbar .magnvs-box,
-  .navbar .icon-link {
+  .navbar-right,
+  .navbar-right .icon-link,
+  .navbar-right .magnvs-box {
     flex: 1 0 100%; /* Make each link and styled elements take full width */
     text-align: center;
     border-right: none;
     padding: 12px;
+    margin-left: 0; /* Aligns items to the center on smaller screens */
   }
 }
