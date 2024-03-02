@@ -80,8 +80,11 @@
 </div>
 
 <script>
+/* Insert the JavaScript code here */
 function openEmail() {
-  window.location.href = "mailto:info@magnvs.io";
+  var subject = encodeURIComponent("Help Request");
+  var emailBody = encodeURIComponent("Hello,\n\nI need assistance with...");
+  window.location.href = `mailto:info@magnvs.io?subject=${subject}&body=${emailBody}`;
 }
 </script>
 
