@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cryptocurrency Market</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Include Chart.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  .main {
+    padding: 16px;
+    margin-top: 50px;
+    height: 1500px; /* Used for demonstration */
+  }
+  .hero-section {
+    text-align: center;
+    padding: 50px;
+    background: #1c1c1c;
+    color: white;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+</style>
 </head>
 <body>
-<div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>24h %</th>
-        <th>7d %</th>
-        <th>Market Cap</th>
-        <th>Volume (24h)</th>
-        <th>Last 7 Days</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td><span>MER</span> Mercurial</td>
-        <td>$0.4362</td>
-        <td class="positive">0.21%</td>
-        <td class="positive">2.26%</td>
-        <td>$23,942,280</td>
-        <td>$708,986</td>
-        <td class="sparkline">[Graph here]</td>
-      </tr>
-      <!-- More rows will follow the same structure -->
-    </tbody>
-  </table>
+
+<div class="navbar">
+  <a href="#curriculums">Curriculums</a>
+  <a href="#updates">Updates</a>
+  <!-- Removed resources -->
+  <!-- Removed accountants -->
+  <!-- Removed pricing -->
+  <a href="javascript:void(0);" onclick="openEmail()">Get Help</a>
+  <a href="http://magnvs.io">MAGNVS.io</a>
 </div>
-<script src="script.js"></script>
+
+<div class="main">
+  <div class="hero-section">
+    <h1>Joined-up curriculums. Effortless learning.</h1>
+    <p>From early education to advanced degrees – organize and track all educational journeys with MAGNVS.io.</p>
+    <a href="#" class="button">Start free</a>
+    <a href="#" class="button">Contact sales</a>
+  </div>
+  <!-- Content of your site -->
+</div>
+
+<script>
+function openEmail() {
+  window.location.href = "mailto:info@magnvs.io";
+}
+</script>
+
 </body>
 </html>
