@@ -1,88 +1,91 @@
-/* styles.css */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
+/* Add this CSS to the <head> of your HTML document inside <style> tags */
+
+/* General body styling */
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f2; /* A light grey background */
 }
 
-.table-container {
-  overflow-x: auto;
-}
-
-table {
+/* Navigation bar styling */
+.navbar {
+  background-color: #000; /* Black background */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   width: 100%;
-  border-collapse: collapse;
+  z-index: 1000;
 }
 
-th, td {
-  text-align: left;
-  padding: 12px 15px;
+/* Navigation links styling */
+.navbar a {
+  float: left;
+  display: block;
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-th {
-  background-color: #1c1c1c;
-  color: #a9a9a9;
+/* Navigation links - on hover */
+.navbar a:hover {
+  background-color: #ddd; /* Light grey background */
+  color: black;
 }
 
-tbody tr {
-  border-bottom: 1px solid #2c2c2c;
+/* Main content and hero section styling */
+.main {
+  padding: 60px 20px 0 20px; /* Some padding at the top to avoid overlap with navbar */
+  text-align: center; /* Centered text */
 }
 
-tbody tr:nth-child(even) {
-  background-color: #1e1e1e;
+.hero-section {
+  background: #191919; /* Dark background for contrast */
+  color: white;
+  padding: 100px 20px;
+  margin-top: 50px; /* Add a top margin to account for the fixed navbar */
 }
 
-td .positive {
-  color: #4caf50;
+/* Styling for large hero text */
+.hero-section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-td .negative {
-  color: #f44336;
+/* Paragraph styling */
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-td span {
-  font-weight: bold;
-  color: #82e0aa;
-}
-
-.sparkline {
-  /* Placeholder for sparkline graph styling */
-}
-
-/* Style the buttons */
-button {
-  background-color: #333;
+/* Button styling */
+.button {
+  background-color: #e50914; /* Bright red for visibility */
   border: none;
-  color: #fff;
-  padding: 5px 10px;
+  color: white;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
 }
 
-/* Responsive table adjustments */
-@media screen and (max-width: 600px) {
-  table {
-    display: block;
-    overflow-x: auto;
-  }
+/* Button hover effect */
+.button:hover {
+  background-color: #b20710; /* A darker shade of red for hover state */
+}
 
-  th, td {
-    width: auto;
-    display: block;
-    text-align: right;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
   }
-
-  th, td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    color: #a9a9a9;
+  .hero-section p {
+    font-size: 18px;
   }
 }
