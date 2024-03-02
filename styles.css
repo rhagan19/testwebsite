@@ -7,20 +7,22 @@ body, html {
   color: #fff; /* White text color */
 }
 
-/* Navigation bar styling */
+/* Navigation bar styling with flexbox */
 .navbar {
   background-color: #fff; /* White background for the navbar */
-  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 20px; /* Add padding on the sides */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* subtle shadow to lift navbar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow to lift navbar */
 }
 
 /* Navigation links styling */
 .navbar a {
-  float: left;
   display: block;
   color: #000; /* Black text for the links */
   text-align: center;
@@ -30,14 +32,32 @@ body, html {
   border-right: 1px solid #f0f0f2; /* Adds a separator between links */
 }
 
+/* Last child link in navbar does not have right border */
 .navbar a:last-child {
-  border-right: none; /* Removes border from the last link */
+  border-right: none;
 }
 
 /* Navigation links - on hover */
 .navbar a:hover {
   background-color: #f0f0f2; /* Light grey background */
   color: black;
+}
+
+/* Style for the question mark icon link */
+.navbar .icon-link img {
+  height: 25px; /* Adjust size as necessary */
+  width: auto;
+}
+
+/* Style for the MAGNVS.io box */
+.navbar .magnvs-box {
+  background-color: gold;
+  padding: 10px 20px;
+  margin-left: auto; /* This pushes the .magnvs-box to the right */
+  border-radius: 5px; /* Optional: for rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: for a subtle shadow */
+  color: black; /* Text color */
+  font-weight: bold; /* Make the font bold */
 }
 
 /* Main content and hero section styling */
@@ -67,13 +87,17 @@ body, html {
   margin-bottom: 2rem;
 }
 
-/* Ensure navbar links are centered on smaller screens */
+/* Responsive adjustments */
 @media (max-width: 600px) {
-  .navbar a {
-    float: none;
-    display: block;
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar a,
+  .navbar .magnvs-box,
+  .navbar .icon-link {
+    flex: 1 0 100%; /* Make each link and styled elements take full width */
     text-align: center;
-    padding: 12px;
     border-right: none;
+    padding: 12px;
   }
 }
